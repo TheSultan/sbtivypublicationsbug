@@ -2,8 +2,7 @@ name := "sbt-ivy-publicationsbug"
 
 version := "1.0"
 
-scalaVersion := "2.9.1"
+scalaVersion := "2.10.2"
 
-libraryDependencies += "org.scalatest" %% "scalatest" % "1.6.1" % "test"
-
-libraryDependencies += "org.mockito" % "mockito-core" % "1.8.5" % "test"
+libraryDependencies ++= Seq("org.apache.cassandra" % "cassandra-thrift" % "1.0.0" intransitive(),
+                    "org.apache.thrift" % "libthrift" % "0.6.1" intransitive())
